@@ -1,0 +1,35 @@
+{
+  "name": "indicium-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "npx tsc",
+    "start": "node dist/",
+    "build:watch": "tsc -w",
+    "build:start": "npm run build && npm start",
+    "prettier": "prettier --check 'src/**/*.ts'",
+    "prettier:fix": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint . --ext=ts --max-warnings 0",
+    "lint:fix": "npm run lint --cache --format pretty --fix . || true"
+  },
+  "author": "Pablo Allendes",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "jest": "^29.5.0",
+    "prettier": "2.8.7",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.6",
+    "fast-csv": "^4.3.6"
+  }
+}
