@@ -1,4 +1,4 @@
-export const converToMatrix = (arr: number[]) => {
+export const converToMatrix = (arr: Array<number | string>) => {
   const cols = Math.sqrt(arr.length);
   const newArr = [];
 
@@ -9,7 +9,7 @@ export const converToMatrix = (arr: number[]) => {
   return newArr;
 };
 
-export const rotateMatrix = (m: number[][]): number[][] => {
+export const rotateMatrix = (m: MatrixData): MatrixData => {
   const N = m.length;
   const rotatedM = Array.from(Array(N), () => new Array(N));
 

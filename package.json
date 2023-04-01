@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "npx tsc",
-    "start": "node dist/",
+    "start": "node dist/index.js",
     "build:watch": "tsc -w",
     "build:start": "npm run build && npm start",
     "prettier": "prettier --check 'src/**/*.ts'",
@@ -29,7 +29,6 @@
     "typescript": "^5.0.3"
   },
   "dependencies": {
-    "csv-parse": "^5.3.6",
     "fast-csv": "^4.3.6"
   }
 }

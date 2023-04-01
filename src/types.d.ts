@@ -6,3 +6,5 @@ interface InputData {
 interface OutputData extends InputData {
   is_valid: boolean;
 }
+
+type MatrixData = Array<number | string>[];
