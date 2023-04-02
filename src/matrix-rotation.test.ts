@@ -31,15 +31,15 @@ describe('Matrix rotation', () => {
     ]);
   });
 
-  it('should rotate the elements in the given 2x2 matrix', () => {
+  it('should rotate the elements in the given 2x2 string matrix', () => {
     expect(
       rotateMatrix([
-        [1, 2],
-        [3, 4],
+        ['1', '2'],
+        ['3', '4'],
       ])
     ).toStrictEqual([
-      [2, 4],
-      [1, 3],
+      ['2', '4'],
+      ['1', '3'],
     ]);
   });
 

@@ -21,7 +21,7 @@ export const parseToCSV = (data: Array<OutputData>) => {
   csvStream.pipe(process.stdout).on('end', () => process.exit());
 
   data.forEach((d) => {
-    csvStream.write(d);
+    csvStream.write(d, 'utf-8');
   });
 
   csvStream.end();

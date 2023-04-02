@@ -4,9 +4,7 @@ import { converToMatrix, rotateMatrix } from './matrix-rotation';
 export const processData = async (inputFileName: string) => {
   const fileContent = await readFile(inputFileName);
 
-  const processedData: Array<OutputData> = [];
-
-  fileContent.forEach((content) => {
+  const processedData = fileContent.map((content) => {
     const matrix = JSON.parse(content.json);
     let rotatedMatrix: Array<number | string> = [];
 
@@ -16,11 +14,11 @@ export const processData = async (inputFileName: string) => {
       rotatedMatrix = rotateMatrix(converToMatrix(matrix)).flat();
     }
 
-    processedData.push({
+    return {
       id: content.id,
       json: JSON.stringify(rotatedMatrix),
       is_valid: isValid,
-    });
+    };
   });
 
   parseToCSV(processedData);
