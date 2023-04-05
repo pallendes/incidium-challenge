@@ -1,6 +1,6 @@
-# Indicium - Interview test
+# Secret Interview test
 
-Interview test for the Incidium process application
+Interview test for a secret process application
 
 ## Instructions
 
